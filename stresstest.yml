@@ -1,0 +1,16 @@
+config:
+  target: 'http://localhost:3000'
+  phases:
+    - duration: 10
+      arrivalRate: 1
+    - duration: 20
+      arrivalRate: 10
+scenarios:
+  - flow:
+    - get:
+        url: "/restaurants/9876543"
+    weight: 2
+  - flow:
+    - get:
+        url: "/restaurants/3456789"
+    weight: 1
