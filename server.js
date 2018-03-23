@@ -9,7 +9,7 @@ app.use(morgan('dev'));
 // app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-  res.redirect('/restaurants/ChIJUcXYWWGAhYARmjMY2bJAG2s/');
+  res.redirect('/restaurants/5012345/');
 });
 
 app.use('/restaurants/:id', express.static(path.join(__dirname, 'public')));
@@ -24,7 +24,7 @@ app.get('/api/restaurants/:id/sidebar', (req, res) => {
   res.redirect(`http://54.177.233.239/api/restaurants/${req.params.id}/sidebar`)
 });
 app.get('/api/restaurants/:id/recommendations', (req, res) => {
-  res.redirect(`http://52.89.102.101/api/restaurants/${req.params.id}/recommendations`)
+  res.redirect(`http://localhost:3004/api/restaurants/${req.params.id}/recommendations`)
 });
 
 app.listen(port, () => {
