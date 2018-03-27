@@ -38,7 +38,7 @@ const fetchBundles = (path, services, suffix = '', require = false) => {
 
 module.exports = (clientPath, serverPath, services) => {
   fetchBundles(clientPath, services);
-  fetchBundles(serverPath, srevices, '-server', true);
+  fetchBundles(serverPath, services, '-server', true);
 
   return services;
 }
