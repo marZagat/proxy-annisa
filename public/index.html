@@ -17,9 +17,17 @@
       </div>
       <div id="recommendations-app"></div>
     </div>
-    <script src="http://13.57.148.57/restaurants/id/bundle.js"></script>
-    <script src="http://184.169.248.150/restaurants/id/bundle.js"></script>
-    <script src="http://54.177.233.239/bundle.js"></script>
-    <script src="http://52.89.102.101/bundle.js"></script>
+
+    <script src="/lib/react.development.js"></script>
+    <script src="/lib/react-dom.development.js"></script>
+    <script src="http://localhost:3004/app.js"></script>
+
+    <script>
+      ReactDOM.render(
+        React.createElement(Recommendations),
+        document.getElementById('recommendations-app')
+      );
+    </script>
+
   </body>
 </html>
