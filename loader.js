@@ -6,8 +6,9 @@ const exists = Promise.promisify(fs.stat);
 const loadBundle = function(cache, item, filename) {
   setTimeout(() => {
     console.log('loading: ', filename);
-    cache[item] = require(filename).default
-  }, 1000);
+    cache[item] = require(filename).default;
+    console.log(cache, item);
+  }, 10000);
 };
 
 const fetchBundles = (path, services, suffix = '', require = false) => {
