@@ -12,7 +12,7 @@ module.exports = (items) => {
     ${items.map(item => {
       console.log('items map: ', item);
       return `ReactDOM.hydrate(
-        React.createElement('${item}'),
+        React.createElement(${item}),
         document.getElementById('${item}')
       );`;
     }).join('\n')}

@@ -1,3 +1,3 @@
 module.exports = (recommended) => `
-  <div id="Recommended">${recommended}</div>
+  <div id="recommendations">${recommended}</div>
 `
