@@ -23,10 +23,8 @@ const App = require('./templates/app');
 const Scripts = require('./templates/scripts');
 
 const renderComponents = (components, props = {}) => {
-  console.log(components);
   return Object.keys(components).map(item => {
     let component = React.createElement(components[item], props);
-    console.log(component);
     return ReactDom.renderToString(component);
   });
 }
