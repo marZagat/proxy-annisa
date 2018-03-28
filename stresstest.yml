@@ -1,9 +1,9 @@
 config:
   target: 'http://localhost:3000'
   phases:
-    - duration: 10
+    - duration: 30
       arrivalRate: 20
-      name: "Test 10 rps"
+      name: "Test 1000 rps"
   processor: "./stressTestHelpers.js"
   http:
     timeout: 2
