@@ -1,3 +1,4 @@
+require('newrelic');
 const express = require('express')
 const morgan = require('morgan');
 const path = require('path');
@@ -30,7 +31,7 @@ const renderComponents = (components, props = {}) => {
 }
 
 app.get('/', (req, res) => {
-  res.redirect('/restaurants/ChIJUcXYWWGAhYARmjMY2bJAG2s/');
+  res.redirect('/restaurants/5012345/');
 });
 
 app.get('/restaurants/:id', function(req, res){

@@ -1,0 +1,27 @@
+config:
+  target: 'http://localhost:3000'
+  phases:
+    - duration: 10
+      arrivalRate: 20
+      name: "Test 10 rps"
+  processor: "./stressTestHelpers.js"
+  http:
+    timeout: 2
+scenarios:
+  - name: "Get popular restaurant"
+    flow:
+    - loop: 
+      - get:
+            beforeRequest: "getPopularId"
+            url: "/restaurants/{{ id }}"
+      count: 50
+    weight: 4
+  - name: "Get normal restaurant"
+    flow:
+      - loop: 
+        - get:
+              beforeRequest: "getNormalId"
+              url: "/restaurants/{{ id }}"
+        count: 50
+    weight: 1
+
