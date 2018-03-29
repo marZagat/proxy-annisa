@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto:400,700" rel="stylesheet">
     <link rel="icon" href="http://res.cloudinary.com/madlicorice/image/upload/v1520448614/WeGot-favicon.ico" type="image/x-icon">
     <title>WeGot</title>
@@ -15,11 +14,19 @@
         <div id="overview-app"></div>
         <div id="sidebar-app"></div>
       </div>
-      <div id="recommendations-app"></div>
+      <div id="recommendations"></div>
     </div>
-    <!-- <script src="http://13.57.148.57/restaurants/id/bundle.js"></script>
-    <script src="http://184.169.248.150/restaurants/id/bundle.js"></script>
-    <script src="http://54.177.233.239/bundle.js"></script> -->
-    <script src="http://localhost:3004/bundle.js"></script>
+
+    <script src="/lib/react.development.js"></script>
+    <script src="/lib/react-dom.development.js"></script>
+    <script src="http://localhost:3004/app.js"></script>
+
+    <script>
+      ReactDOM.render(
+        React.createElement(recommendations),
+        document.getElementById('recommendations')
+      );
+    </script>
+
   </body>
 </html>
