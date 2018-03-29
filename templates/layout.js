@@ -9,7 +9,7 @@ module.exports = (title, body, scripts) => `
     </head>
     <body>
     ${body}
-    </body>
     ${scripts}
+    </body>
   </html>
 `
