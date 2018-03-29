@@ -8,7 +8,7 @@ const loadBundle = function(cache, item, filename) {
     console.log('loading: ', filename);
     cache[item] = require(filename).default;
     console.log(cache, item);
-  }, 15000);
+  }, 20000);
 };
 
 const fetchBundles = (path, services, suffix = '', require = false) => {
