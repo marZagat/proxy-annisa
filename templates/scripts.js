@@ -10,7 +10,6 @@ module.exports = (items) => {
 
   <script>
     ${items.map(item => {
-      console.log('items map: ', item);
       return `ReactDOM.hydrate(
         React.createElement(${item}),
         document.getElementById('${item}')
