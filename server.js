@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const clientBundles = './public/services';
 const serverBundles = './templates/services';
-const serviceConfig = require('./service-config.json');
+const serviceConfig = require('./service-config.js');
 const services = require('./loader.js')(clientBundles, serverBundles, serviceConfig);
 
 const React = require('react');
